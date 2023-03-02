@@ -43,11 +43,9 @@
     </div>
     <br>
     <h1 style="color: #ff8034">Catégories</h1>
-    <mat-chip-listbox aria-label="Fish selection" multiple selectable>
-      <mat-chip-option [selected]="">One fish</mat-chip-option>
-      <mat-chip-option [selected]="">Two fish</mat-chip-option>
-      <mat-chip-option color="accent">Accent fish</mat-chip-option>
-      <mat-chip-option color="warn">Warn fish</mat-chip-option>
+    <mat-chip-listbox aria-label="Fish selection" multiple selectable
+                      *ngFor="let category of categories">
+      <mat-chip-option>{{category}}</mat-chip-option>
     </mat-chip-listbox>
     <br>
     <h1 style="color: #ff8034">Emplacement</h1>

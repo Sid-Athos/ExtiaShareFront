@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {FormControl} from '@angular/forms';
 import {Observable, Subscription} from 'rxjs';
@@ -12,8 +12,10 @@ import {Category} from "../models/Category";
   templateUrl: './add-product.component.html',
   styleUrls: ['./add-product.component.scss']
 })
-export class AddProductComponent {
+export class AddProductComponent implements OnInit {
   public _itemSubscription: Subscription | undefined;
+
+  public categories: Category[] = [];
 
   constructor(private modalService: NgbModal, protected _categoryListService: CategoryListService) {
     const currentYear = new Date().getFullYear();
@@ -21,28 +23,27 @@ export class AddProductComponent {
     this.maxDate = new Date(currentYear + 10, 0, 1);
   }
 
-  minDate: Date;
-  maxDate: Date;
-
-  categories: any = [];
-  myControl = new FormControl('');
-  options: string[] = ['One', 'Two', 'Three'];
-  filteredOptions: Observable<string[]> | undefined;
-
   ngOnInit() {
     this.filteredOptions = this.myControl.valueChanges.pipe(
       startWith(''),
       map(value => this._filter(value || '')),
     );
     this._itemSubscription = this._categoryListService.fetchAll().subscribe((response) => {
-      if(response.ok) {
-        this.categories = response.body;
+      console.log(response)
+      if (response.ok) {
+        this.categories = response;
         console.log(this.categories)
       }
     });
-
   }
 
+  minDate: Date;
+  maxDate: Date;
+
+
+  myControl = new FormControl('');
+  options: string[] = ['One', 'Two', 'Three'];
+  filteredOptions: Observable<string[]> | undefined;
 
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();
