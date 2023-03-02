@@ -1,1 +1,17 @@
 
+<div class="d-flex flex-column">
+    <div style="color: #FF8034; font-size: 24px;" class="m-5">Liste des produits disponible</div>
+    
+    <div class="d-flex flex-100 gap-10 flex-row justify-content-center mt-5">
+        <div class="w-15">Nom du produit</div>
+        <div class="w-15">Description</div>
+        <div class="w-15">Catégories</div>
+        <div class="w-15">Date d'expiration</div>
+        <div class="w-15">Quantité</div>
+        <div class="w-15">Valider pickup</div>
+    </div>
+
+    <div class="d-flex me-5 ms-5" *ngFor="let item of items">
+        <app-item-list [item]="item"></app-item-list>
+    </div>
+</div>
