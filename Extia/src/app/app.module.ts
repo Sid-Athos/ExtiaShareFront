@@ -23,6 +23,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import {MatIconModule} from "@angular/material/icon";
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
+import { AddProductComponent } from './add-product/add-product.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import {MatAutocompleteModule} from "@angular/material/autocomplete";
     NavbarComponent,
     ModalUserComponent,
     ShareLayoutComponent,
-    SearchComponent
+    SearchComponent,
+    AddProductComponent
   ],
   imports: [
     AppRoutingModule,
