@@ -1,0 +1,6 @@
+.cell {
+    display: flex;
+    width: 15%;
+    max-width: 15%;
+    font-size: 20px;
+}

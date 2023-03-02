@@ -1,9 +1,7 @@
-<mat-card class="d-flex flex-100 justify-content-center matCard">
-    <mat-card-content>
-        <div class="max-width-15">{{item.name}}</div>
-        <div class="max-width-15">{{item.categories}}</div>
-        <div class="max-width-15">{{item.expirationDate}}</div>
-        <div class="max-width-15">{{item.quantity}}</div>
-        <div class="max-width-15" (click)="removeItemFromList($event)"><i></i></div>
-    </mat-card-content>
-</mat-card>
+    <div  class="d-flex flex-80 justify-content-center align-items-center" style="height: 80px; border-radius: 2em; box-shadow: 0 2px 1px -1px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f;">
+        <div class="cell">{{item.name}}</div>
+        <div class="cell">{{item.categories}}</div>
+        <div class="cell">{{item.expirationDate}}</div>
+        <div class="cell">{{item.quantity}}</div>
+        <div class="cell" (click)="removeItemFromList($event)"><i></i></div>
+</div>

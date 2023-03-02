@@ -2,17 +2,34 @@
 <app-add-product></app-add-product>
 
 <div class="d-flex flex-column">
-    <div style="color: #FF8034; font-size: 24px;" class="m-5">Liste des produits disponible</div>
-    
-    <div class="d-flex flex-100 flex-row justify-content-center">
-        <div class="max-width-15">Nom du produit</div>
-        <div class="max-width-15">Catégories</div>
-        <div class="max-width-15">Date d'expiration</div>
-        <div class="max-width-15">Quantité</div>
-        <div class="max-width-15">Valider pickup</div>
+    <div style="color: #FF8034; font-size: 24px;" class="m-5">
+        Liste des produits disponible
     </div>
 
-    <div class="flex-row" *ngFor="let item of items">
-        <app-item-list class="d-flex flex-100" [item]="item"></app-item-list>
-    </div>
+    <table mat-table [dataSource]="items" class="width-100 mat-elevation-z8">
+        <ng-container matColumnDef="productName">
+            <th mat-header-cell *matHeaderCellDef>Nom du produit</th>
+            <td mat-cell *matCellDef="let item">{{item.name}}</td>
+        </ng-container>
+        <ng-container matColumnDef="categories">
+            <th mat-header-cell *matHeaderCellDef>Catégories</th>
+            <td mat-cell *matCellDef="let item">{{item.categories}}</td>
+        </ng-container>
+        <ng-container matColumnDef="expirationDate">
+            <th mat-header-cell *matHeaderCellDef>Date d'expiration</th>
+            <td mat-cell *matCellDef="let item">{{item.expirationDate}}</td>
+        </ng-container>
+        <ng-container matColumnDef="quantity">
+            <th mat-header-cell *matHeaderCellDef>Quantité</th>
+            <td mat-cell *matCellDef="let item">{{item.quantity}}</td>
+        </ng-container>
+        <ng-container matColumnDef="pickup">
+            <th mat-header-cell *matHeaderCellDef>Valider pickup</th>
+            <td mat-cell *matCellDef="let item">pickup</td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>      
+    </table>
+
+    <!-- <app-item-list class="mt-1" *ngFor="let item of items" [item]="item"></app-item-list>     -->
 </div>

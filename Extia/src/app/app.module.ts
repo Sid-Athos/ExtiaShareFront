@@ -22,6 +22,8 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import {MatIconModule} from "@angular/material/icon";
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
+import { MatCardModule } from "@angular/material/card"
+import { MatTableModule } from "@angular/material/table"
 import { AddProductComponent } from './add-product/add-product.component';
 import { ItemListComponent } from './share-layout/item-list/item-list.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -54,6 +56,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatChipsModule,
     MatIconModule,
     MatToolbarModule,
+    MatCardModule,
+    MatTableModule,
     MatDividerModule,
     ReactiveFormsModule,
     MatButtonModule,

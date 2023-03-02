@@ -11,6 +11,7 @@ import { ItemListService } from './item-list/item-list.service';
 })
 export class ShareLayoutComponent implements OnInit, OnDestroy {
 
+  displayedColumns: string[] = ['productName', 'categories', 'expirationDate', 'quantity', 'pickup'];
   public items: Array<Item> = [
     {
       id: "1",
@@ -18,7 +19,7 @@ export class ShareLayoutComponent implements OnInit, OnDestroy {
       description: "Des pommes en bonne état.",
       categories: ["fruit", "végan"],
       quantity: "2",
-      expirationDate: new Date().getDate().toString()
+      expirationDate: new Date().toLocaleString()
     },
     {
       id: "2",
@@ -26,7 +27,7 @@ export class ShareLayoutComponent implements OnInit, OnDestroy {
       description: "Des poires acheté il y'a quelques jours",
       categories: ["fruit", "végétarien"],
       quantity: "3",
-      expirationDate: new Date().getDate().toString()
+      expirationDate: new Date().toLocaleString()
     },
     {
       id: "3",
@@ -34,7 +35,7 @@ export class ShareLayoutComponent implements OnInit, OnDestroy {
       description: "Me prend pas le choux",
       categories: ["Légume", "végan", "végétarien"],
       quantity: "1",
-      expirationDate: new Date().getDate().toString()
+      expirationDate: new Date().toLocaleString()
     },
   ];
 
