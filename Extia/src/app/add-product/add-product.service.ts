@@ -1,4 +1,4 @@
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpResponse} from '@angular/common/http';
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 import {Category} from 'src/app/models/Category';
@@ -12,8 +12,8 @@ export class CategoryListService {
   constructor(private httpClient: HttpClient) {
   }
 
-  public fetchAll(): Observable<Array<Category>>  {
-    return this.httpClient.get<Array<Category>>(this.getCategory);
+  public fetchAll(): Observable<HttpResponse<Category[]>>  {
+    return this.httpClient.get<HttpResponse<Category[]>>(this.getCategory);
   }
 
 }

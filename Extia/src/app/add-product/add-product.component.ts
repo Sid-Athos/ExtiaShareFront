@@ -4,6 +4,8 @@ import {FormControl} from '@angular/forms';
 import {Observable, Subscription} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
 import {CategoryListService} from "./add-product.service";
+import {HttpResponse} from "@angular/common/http";
+import {Category} from "../models/Category";
 
 @Component({
   selector: 'app-add-product',
@@ -22,7 +24,7 @@ export class AddProductComponent {
   minDate: Date;
   maxDate: Date;
 
-  categories: any[] = [];
+  categories: any = [];
   myControl = new FormControl('');
   options: string[] = ['One', 'Two', 'Three'];
   filteredOptions: Observable<string[]> | undefined;
@@ -32,10 +34,13 @@ export class AddProductComponent {
       startWith(''),
       map(value => this._filter(value || '')),
     );
-    this._itemSubscription = this._categoryListService.fetchAll().subscribe((next) => {
-      this.categories = next;
+    this._itemSubscription = this._categoryListService.fetchAll().subscribe((response) => {
+      if(response.ok) {
+        this.categories = response.body;
+        console.log(this.categories)
+      }
     });
-    console.log(this.categories)
+
   }
 
 

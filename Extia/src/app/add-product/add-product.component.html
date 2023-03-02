@@ -46,7 +46,7 @@
     <mat-chip-listbox aria-label="Fish selection" multiple selectable>
       <mat-chip-option [selected]="">One fish</mat-chip-option>
       <mat-chip-option [selected]="">Two fish</mat-chip-option>
-      <mat-chip-option color="accent" selected>Accent fish</mat-chip-option>
+      <mat-chip-option color="accent">Accent fish</mat-chip-option>
       <mat-chip-option color="warn">Warn fish</mat-chip-option>
     </mat-chip-listbox>
     <br>
@@ -54,11 +54,12 @@
     <mat-chip-listbox aria-label="Fish selection">
       <mat-chip-option>One fish</mat-chip-option>
       <mat-chip-option>Two fish</mat-chip-option>
-      <mat-chip-option color="accent" selected>Accent fish</mat-chip-option>
+      <mat-chip-option color="accent">Accent fish</mat-chip-option>
       <mat-chip-option color="warn">Warn fish</mat-chip-option>
     </mat-chip-listbox>
   </div>
   <div class="modal-footer">
+    <button type="button" class="btn btn-primary add-product-style">Ajouter</button>
     <button type="button" class="btn btn-secondary" (click)="modal.dismiss()">Close</button>
   </div>
 </ng-template>

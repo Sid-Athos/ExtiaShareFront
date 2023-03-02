@@ -25,7 +25,6 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
 import { AddProductComponent } from './add-product/add-product.component';
 import { ItemListComponent } from './share-layout/item-list/item-list.component';
-import { AgGridModule } from 'ag-grid-angular';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -37,8 +36,7 @@ import { HttpClientModule } from '@angular/common/http';
     ModalUserComponent,
     ShareLayoutComponent,
     SearchComponent,
-    AddProductComponent
-    ShareLayoutComponent,
+    AddProductComponent,
     ItemListComponent,
   ],
   imports: [
@@ -64,7 +62,6 @@ import { HttpClientModule } from '@angular/common/http';
     MatAutocompleteModule,
     AppRoutingModule,
     NgbModule,
-    AgGridModule,
     HttpClientModule,
   ],
   providers: [],
