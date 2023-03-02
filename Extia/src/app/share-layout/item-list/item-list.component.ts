@@ -1,5 +1,4 @@
 import { Component, Inject, Input, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { Item } from 'src/app/models/Item';
 import { ItemListService } from './item-list.service';
 
@@ -10,10 +9,17 @@ import { ItemListService } from './item-list.service';
 })
 export class ItemListComponent implements OnInit {
 
-  @Input('item') public item: Item;
+  @Input('item')
+  public item: Item;
 
-  constructor() {}
+  constructor(
+    protected itemListService: ItemListService,
+  ) {}
 
   ngOnInit(): void {  }  
 
+  public removeItemFromList($event: any): void {
+    console.log($event);
+    // this.itemListService.popItem($event);
+  }
 }

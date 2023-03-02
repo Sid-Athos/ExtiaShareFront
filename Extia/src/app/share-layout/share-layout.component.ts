@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { BehaviorSubject, Subject, Subscription } from 'rxjs';
 import { Item } from '../models/Item';
 import { ItemListService } from './item-list/item-list.service';
 
@@ -8,7 +8,7 @@ import { ItemListService } from './item-list/item-list.service';
   templateUrl: './share-layout.component.html',
   styleUrls: ['./share-layout.component.css']
 })
-export class ShareLayoutComponent implements OnInit{
+export class ShareLayoutComponent implements OnInit, OnDestroy {
 
   public items: Array<Item> = [
     {
@@ -36,20 +36,20 @@ export class ShareLayoutComponent implements OnInit{
       expirationDate: new Date().getDate().toString()
     },
   ];
-//  public items: BehaviorSubject<Array<Item>> = new BehaviorSubject({} as Array<Item>);
-  public _itemSubscription: Subscription;
 
-  constructor(protected _itemListService: ItemListService) {}
+	// public items: Item[];
+	public subscriber: Subscription;
 
-  ngOnInit(): void {
-//      this._itemSubscription = this._itemListService.fetchAll().subscribe((next) => {
-//        this.items = next;
-//      });
-//
-//      console.log(this.items)
-  }
+  	constructor(protected itemListService: ItemListService) {}
 
-//  removeItemFromList(item: Item) {
-//    this.items.next(this.items.value.filter(it => it != item));
-//  }
+	ngOnInit(): void {
+		// this.subscriber = this.itemListService.itemsSubject.subscribe((items: Item[]) => {
+		// 	this.items = items;
+		// }); 
+		// this.itemListService.getItems();
+	}
+
+	ngOnDestroy(): void {
+		// this.subscriber.unsubscribe();
+	}
 }

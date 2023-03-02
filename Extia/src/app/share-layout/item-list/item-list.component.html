@@ -1,3 +1,7 @@
-<div class="d-flex flex-100  flex-row justify-content-center align-items-center mt-5">
-    <div></div>
+<div class="d-flex flex-100">
+    <div class="width-15">{{item.name}}</div>
+    <div class="width-15">{{item.categories}}</div>
+    <div class="width-15">{{item.expirationDate}}</div>
+    <div class="width-15">{{item.quantity}}</div>
+    <div class="width-15" (click)="removeItemFromList($event)"><i></i></div>
 </div>
