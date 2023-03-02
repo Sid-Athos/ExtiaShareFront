@@ -29,11 +29,8 @@ export class AddProductComponent implements OnInit {
       map(value => this._filter(value || '')),
     );
     this._itemSubscription = this._categoryListService.fetchAll().subscribe((response) => {
-      console.log(response)
-      if (response.ok) {
         this.categories = response;
         console.log(this.categories)
-      }
     });
   }
 

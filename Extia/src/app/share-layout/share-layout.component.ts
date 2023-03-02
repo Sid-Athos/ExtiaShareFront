@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
-import { Item } from '../models/Item';
-import { ItemListService } from './item-list/item-list.service';
+import {Component, OnInit} from '@angular/core';
+import {Subscription} from 'rxjs';
+import {Item} from '../models/Item';
+import {ItemListService} from './item-list/item-list.service';
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -9,8 +10,8 @@ import { ItemListService } from './item-list/item-list.service';
   templateUrl: './share-layout.component.html',
   styleUrls: ['./share-layout.component.scss']
 })
-export class ShareLayoutComponent implements OnInit{
-
+export class ShareLayoutComponent implements OnInit {
+  user: any;
   public items: Array<Item> = [
     {
       id: "1",
@@ -37,12 +38,23 @@ export class ShareLayoutComponent implements OnInit{
       expirationDate: new Date().getDate().toString()
     },
   ];
-//  public items: BehaviorSubject<Array<Item>> = new BehaviorSubject({} as Array<Item>);
-  public _itemSubscription: Subscription;
 
-  constructor(protected _itemListService: ItemListService) {}
+//  public items: BehaviorSubject<Array<Item>> = new BehaviorSubject({} as Array<Item>);
+
+
+  constructor(protected _itemListService: ItemListService, private router: Router) {
+  }
 
   ngOnInit(): void {
+    //check if user is not null and if not redirect to home in localstorage
+    if (localStorage.getItem("user") == null) {
+      this.router.navigate(['/login']);
+    } else {
+      if (localStorage.getItem("user") != null) {
+        let json = localStorage.getItem("user");
+        this.user = JSON.parse(json!);
+      }
+    }
 //      this._itemSubscription = this._itemListService.fetchAll().subscribe((next) => {
 //        this.items = next;
 //      });

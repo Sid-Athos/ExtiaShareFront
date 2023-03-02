@@ -5,7 +5,6 @@ import {ShareLayoutComponent} from './share-layout/share-layout.component';
 
 
 const routes: Routes = [
-  {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: 'login', component: ConnexionComponent},
   {path: 'share', component: ShareLayoutComponent},
 ];

@@ -1,5 +1,8 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
+import {Subscription} from "rxjs";
+import {CategoryListService} from "../add-product/add-product.service";
+import {Category} from "../models/Category";
 
 
 @Component({
@@ -7,7 +10,18 @@ import {FormControl} from '@angular/forms';
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss'],
 })
-export class SearchComponent {
+export class SearchComponent implements OnInit {
+  public categories: Category[] = [];
+  constructor(protected _categoryListService: CategoryListService) {
+  }
+
   toppings = new FormControl('');
-  toppingList: string[] = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
+  public _itemSubscription: Subscription | undefined;
+
+  ngOnInit() {
+    this._itemSubscription = this._categoryListService.fetchAll().subscribe((response) => {
+      this.categories = response;
+      console.log(this.categories)
+    });
+  }
 }

@@ -10,4 +10,9 @@
 .style-nav{
   background-color: #ff8034 !important;
 }
+.deco{
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
 

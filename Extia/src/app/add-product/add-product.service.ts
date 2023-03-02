@@ -7,8 +7,8 @@ import {Category} from 'src/app/models/Category';
   providedIn: 'root'
 })
 export class CategoryListService {
-  private getCategory = `https://clean-code.azurewebsites.net/category`;
-  //private getCategory = `http://localhost:8080/category`;
+  //private getCategory = `https://clean-code.azurewebsites.net/category`;
+  private getCategory = `http://localhost:8080/category`;
 
   constructor(private httpClient: HttpClient) {
   }
