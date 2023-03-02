@@ -1,7 +1,9 @@
-<div class="d-flex flex-100">
-    <div class="width-15">{{item.name}}</div>
-    <div class="width-15">{{item.categories}}</div>
-    <div class="width-15">{{item.expirationDate}}</div>
-    <div class="width-15">{{item.quantity}}</div>
-    <div class="width-15" (click)="removeItemFromList($event)"><i></i></div>
-</div>
+<mat-card class="d-flex flex-100 justify-content-center matCard">
+    <mat-card-content>
+        <div class="max-width-15">{{item.name}}</div>
+        <div class="max-width-15">{{item.categories}}</div>
+        <div class="max-width-15">{{item.expirationDate}}</div>
+        <div class="max-width-15">{{item.quantity}}</div>
+        <div class="max-width-15" (click)="removeItemFromList($event)"><i></i></div>
+    </mat-card-content>
+</mat-card>
