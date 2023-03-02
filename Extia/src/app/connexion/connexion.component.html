@@ -1,0 +1,22 @@
+<div class="allbody">
+  <div class="wrapper fadeInDown">
+    <div id="formContent" class="size-wrapper">
+      <p *ngIf="returnError">
+        <ngb-alert [dismissible]="true" (closed)="closeAlert()">
+          <strong>Attention !</strong> {{returnMessage}}.
+        </ngb-alert>
+      </p>
+      <br>
+      <div class="fadeIn first">
+        <img src="assets/logo.png" class="logo-panier fadeIn first">
+        <br>
+      </div>
+      <div class="fadeIn first">
+        <input type="text" #login class="fadeIn second" placeholder="Pseudo">
+        <input type="password" #password class="fadeIn third" placeholder="Mot de passe">
+        <br><br>
+        <input type="submit" class="fadeIn fourth" value="Valider">
+      </div>
+    </div>
+  </div>
+</div>
