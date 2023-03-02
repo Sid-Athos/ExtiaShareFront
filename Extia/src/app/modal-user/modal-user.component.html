@@ -1,0 +1,28 @@
+<img src="assets/user-default.png" class="logo-profil" width="60" height="60" style="cursor: pointer"
+     (click)="open(modalContent)">
+<ng-template #modalContent let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Profile</h4>
+
+  </div>
+  <div class="modal-body">
+    <div style="display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;">
+      <img src="assets/user-default.png" class="logo-profil" width="200" height="200">
+      <br>
+      <div style=" display: flex;flex-direction: row">
+        <p>David</p>
+        <p style="margin-left: 10px">ZERBIB</p>
+      </div>
+      <p><u>Score</u></p>
+      <p>100</p>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modal.dismiss()">Close</button>
+  </div>
+</ng-template>

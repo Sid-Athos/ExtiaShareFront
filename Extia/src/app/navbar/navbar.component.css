@@ -1,0 +1,13 @@
+.logo-name {
+  align-self: center;
+  justify-content: center;
+  margin-left:20px;
+  color: white;
+}
+.div-flex {
+  display: flex;
+}
+.style-nav{
+  background-color: #ff8034 !important;
+}
+
