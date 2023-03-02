@@ -24,6 +24,11 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
 import {MatIconModule} from "@angular/material/icon";
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
 import { AddProductComponent } from './add-product/add-product.component';
+import { ItemListComponent } from './share-layout/item-list/item-list.component';
+import { AgGridModule } from 'ag-grid-angular';
+import { HttpClientModule } from '@angular/common/http';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +38,8 @@ import { AddProductComponent } from './add-product/add-product.component';
     ShareLayoutComponent,
     SearchComponent,
     AddProductComponent
+    ShareLayoutComponent,
+    ItemListComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -55,6 +62,10 @@ import { AddProductComponent } from './add-product/add-product.component';
     MatButtonModule,
     MatCheckboxModule,
     MatAutocompleteModule,
+    AppRoutingModule,
+    NgbModule,
+    AgGridModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
