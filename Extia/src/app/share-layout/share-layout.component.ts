@@ -3,10 +3,11 @@ import { BehaviorSubject, Subject, Subscription } from 'rxjs';
 import { Item } from '../models/Item';
 import { ItemListService } from './item-list/item-list.service';
 
+
 @Component({
   selector: 'app-share-layout',
   templateUrl: './share-layout.component.html',
-  styleUrls: ['./share-layout.component.css']
+  styleUrls: ['./share-layout.component.scss']
 })
 export class ShareLayoutComponent implements OnInit, OnDestroy {
 

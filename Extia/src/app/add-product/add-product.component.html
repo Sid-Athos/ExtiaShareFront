@@ -1,0 +1,64 @@
+<div class="wrapper">
+  <div class="main-layout">
+  </div>
+  <input type="button" class="fixed-button" value="Ajouter un aliment" (click)="open(modalContentAddProduct)">
+</div>
+<ng-template #modalContentAddProduct let-modal>
+  <div class="modal-header">
+    <h1 style="color: #ff8034">Déposer un produit</h1>
+  </div>
+  <div class="modal-body">
+    <div style="display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 100%;">
+      <br>
+      <div style="display:flex;justify-content: center;align-items: center; flex-direction: column">
+        <input style="display: none">
+        <form class="example-form">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Nom du produit</mat-label>
+            <input
+              placeholder="Nom du produit"
+              aria-label="Nom du produit"
+              matInput
+              [formControl]="myControl"
+              [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let option of filteredOptions | async" [value]="option" (click)="selectOptionOfProduct(option)">
+                {{option}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </form>
+        <br>
+        <mat-form-field appearance="fill">
+          <mat-label>Expiration</mat-label>
+          <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker">
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <input type="number" placeholder="Quantité...">
+      </div>
+    </div>
+    <br>
+    <h1 style="color: #ff8034">Catégories</h1>
+    <mat-chip-listbox aria-label="Fish selection" multiple selectable
+                      *ngFor="let category of categories">
+      <mat-chip-option>{{category}}</mat-chip-option>
+    </mat-chip-listbox>
+    <br>
+    <h1 style="color: #ff8034">Emplacement</h1>
+    <mat-chip-listbox aria-label="Fish selection">
+      <mat-chip-option>One fish</mat-chip-option>
+      <mat-chip-option>Two fish</mat-chip-option>
+      <mat-chip-option color="accent">Accent fish</mat-chip-option>
+      <mat-chip-option color="warn">Warn fish</mat-chip-option>
+    </mat-chip-listbox>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary add-product-style">Ajouter</button>
+    <button type="button" class="btn btn-secondary" (click)="modal.dismiss()">Close</button>
+  </div>
+</ng-template>
+

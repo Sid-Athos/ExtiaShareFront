@@ -13,3 +13,7 @@
     width: 15%;
     max-width: 15%;
 }
+
+html, body { height: 100%; }
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
