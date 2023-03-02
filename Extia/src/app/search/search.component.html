@@ -1,0 +1,19 @@
+<h1 class="title">Rechercher un produit</h1>
+<div class="div-struct">
+  <div class="container">
+    <div class="flex-row height d-flex justify-content-center align-items-center">
+      <div class="col-md-6">
+        <div class="form">
+          <i class="fa fa-search"></i>
+          <input type="text" class="form-control form-input" placeholder="Rechercher un aliment...">
+        </div>
+      </div>
+      <mat-form-field appearance="fill" style="margin-top:20px;">
+        <mat-label>Filtre</mat-label>
+        <mat-select [formControl]="toppings" multiple>
+          <mat-option *ngFor="let category of categories">{{category["name"]}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+</div>

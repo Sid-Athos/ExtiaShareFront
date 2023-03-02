@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Params, Router} from "@angular/router";
 import {UserConnect} from '../models/UserConnect';
+import {Subscription} from "rxjs";
+import {ConnexionService} from "./connexion.service";
 
 @Component({
   selector: 'app-connexion-user',
@@ -9,48 +11,33 @@ import {UserConnect} from '../models/UserConnect';
 })
 export class ConnexionComponent implements OnInit {
   userConnect: UserConnect = new UserConnect();
+  user: any;
+  public _itemSubscription: Subscription | undefined;
   public returnError = false;
   public returnMessage: string = "";
 
-  constructor(private router: Router) {
+  constructor(private router: Router, protected _connexionService: ConnexionService) {
   }
 
   ngOnInit(): void {
+
   }
 
-  /*  checkConnected(login: string, password: string): void {
-      if (login.trim() != "" && password.trim() != "") {
-        this.userConnect.login = login;
-        this.userConnect.password = password;
-        this.connexionService.connectUser(this.userConnect).subscribe(
-          async res => {
-            if (res.response) {
-              this.returnError = false;
-              localStorage.setItem("token", res.connexion.token);
-              const queryParams: Params = {connect: "ok"};
-              await this.router.navigate(
-                ['/purchase'],
-                {
-                  queryParams: queryParams,
-                });
-            }
-          },
-          error => {
-            this.returnError = true;
-            this.returnMessage = error.error.message;
-          });
-      }
-    }*/
 
-  isUserLoggedIn(): boolean {
-    return localStorage.getItem("token") != null;
-  }
 
-  logout(): void {
-    localStorage.removeItem("token");
-  }
+  connexion(login: any, password: any) {
+    if (login.value != "" && password.value != "") {
+      this.userConnect.mailAddress = login.value;
+      this.userConnect.password = password.value;
+      console.log(this.userConnect);
 
-  closeAlert() {
-    this.returnError = false;
+      this._itemSubscription = this._connexionService.connexionUser(this.userConnect).subscribe((response) => {
+        this.user = response;
+        if (this.user != null) {
+          localStorage.setItem("user", JSON.stringify(this.user));
+          this.router.navigate(['/share']);
+        }
+      });
+    }
   }
 }

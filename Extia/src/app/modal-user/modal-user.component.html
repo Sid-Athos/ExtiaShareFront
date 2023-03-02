@@ -1,4 +1,4 @@
-<img src="assets/user-default.png" class="logo-profil" width="60" height="60" style="cursor: pointer"
+<img src="{{imageUser}}" class="logo-profil" width="60" height="60" style="cursor: pointer"
      (click)="open(modalContent)">
 <ng-template #modalContent let-modal>
   <div class="modal-header">
@@ -12,14 +12,13 @@
                 align-items: center;
                 width: 100%;
                 height: 100%;">
-      <img src="assets/user-default.png" class="logo-profil" width="200" height="200">
+      <img src="{{imageUser}}" class="logo-profil" width="200" height="200">
       <br>
       <div style=" display: flex;flex-direction: row">
-        <p>David</p>
-        <p style="margin-left: 10px">ZERBIB</p>
+        <p>{{user.mailAddress}}</p>
       </div>
       <p><u>Score</u></p>
-      <p>100</p>
+      <p>{{user.score}}</p>
     </div>
   </div>
   <div class="modal-footer">
