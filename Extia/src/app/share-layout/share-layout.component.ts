@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {Subscription} from 'rxjs';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import { BehaviorSubject, Subject,Subscription} from 'rxjs';
 import {Item} from '../models/Item';
 import {ItemListService} from './item-list/item-list.service';
 import {Router} from "@angular/router";
@@ -10,8 +10,10 @@ import {Router} from "@angular/router";
   templateUrl: './share-layout.component.html',
   styleUrls: ['./share-layout.component.scss']
 })
-export class ShareLayoutComponent implements OnInit {
+export class ShareLayoutComponent implements OnInit, OnDestroy  {
   user: any;
+  displayedColumns: string[] = ['productName', 'categories', 'expirationDate', 'quantity', 'pickup'];
+  
   public items: Array<Item> = [
     {
       id: "1",
@@ -19,7 +21,7 @@ export class ShareLayoutComponent implements OnInit {
       description: "Des pommes en bonne état.",
       categories: ["fruit", "végan"],
       quantity: "2",
-      expirationDate: new Date().getDate().toString()
+      expirationDate: new Date().toLocaleString()
     },
     {
       id: "2",
@@ -27,7 +29,7 @@ export class ShareLayoutComponent implements OnInit {
       description: "Des poires acheté il y'a quelques jours",
       categories: ["fruit", "végétarien"],
       quantity: "3",
-      expirationDate: new Date().getDate().toString()
+      expirationDate: new Date().toLocaleString()
     },
     {
       id: "3",
@@ -35,17 +37,17 @@ export class ShareLayoutComponent implements OnInit {
       description: "Me prend pas le choux",
       categories: ["Légume", "végan", "végétarien"],
       quantity: "1",
-      expirationDate: new Date().getDate().toString()
+      expirationDate: new Date().toLocaleString()
     },
   ];
 
-//  public items: BehaviorSubject<Array<Item>> = new BehaviorSubject({} as Array<Item>);
+	// public items: Item[];
+	public subscriber: Subscription;
 
-
-  constructor(protected _itemListService: ItemListService, private router: Router) {
+  	constructor(protected itemListService: ItemListService, private router: Router) {
   }
 
-  ngOnInit(): void {
+	ngOnInit(): void {
     //check if user is not null and if not redirect to home in localstorage
     if (localStorage.getItem("user") == null) {
       this.router.navigate(['/login']);
@@ -55,14 +57,13 @@ export class ShareLayoutComponent implements OnInit {
         this.user = JSON.parse(json!);
       }
     }
-//      this._itemSubscription = this._itemListService.fetchAll().subscribe((next) => {
-//        this.items = next;
-//      });
-//
-//      console.log(this.items)
-  }
+		// this.subscriber = this.itemListService.itemsSubject.subscribe((items: Item[]) => {
+		// 	this.items = items;
+		// }); 
+		// this.itemListService.getItems();
+	}
 
-//  removeItemFromList(item: Item) {
-//    this.items.next(this.items.value.filter(it => it != item));
-//  }
+	ngOnDestroy(): void {
+		// this.subscriber.unsubscribe();
+	}
 }
