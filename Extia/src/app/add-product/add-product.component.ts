@@ -49,12 +49,15 @@ export class AddProductComponent implements OnInit {
     });
     this._categoryListService.getSubscribeCategory();
     let json = localStorage.getItem("user");
-    let user = JSON.parse(json!);
-    this._categoryListService.getAllStorage(user.company.id).subscribe((response) => {
-      for (let i = 0; i < response.length; i++) {
-        this.sizeStorage.push(response[i].size)
-      }
-    });
+    if(json != null){
+      let user = JSON.parse(json!);
+      this._categoryListService.getAllStorage(user.company.id).subscribe((response) => {
+        for (let i = 0; i < response.length; i++) {
+          this.sizeStorage.push(response[i].size)
+        }
+      });
+    }
+
 
   }
 

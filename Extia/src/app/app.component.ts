@@ -12,14 +12,18 @@ export class AppComponent implements OnInit {
   isNavBarComponent: boolean = false;
 
   constructor(
+    private location: Location,
     private router: Router,
     ) {
   }
 
   ngOnInit() {
-    if (this.router.url.includes('/login')){
-      this.isNavBarComponent = false;
-    }
-    this.isNavBarComponent = true;
+    this.router.events.subscribe((val) => {
+      if (this.location.isCurrentPathEqualTo('/login')) {
+        this.isNavBarComponent = true;
+      } else {
+        this.isNavBarComponent = false;
+      }
+    });
   }
 }
