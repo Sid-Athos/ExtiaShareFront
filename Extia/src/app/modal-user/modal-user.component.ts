@@ -1,7 +1,10 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Injectable, Input, OnInit} from '@angular/core';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import { User } from '../models/User';
 
+@Injectable({
+  providedIn:'root'
+})
 @Component({
   selector: 'app-modal-user',
   templateUrl: './modal-user.component.html',

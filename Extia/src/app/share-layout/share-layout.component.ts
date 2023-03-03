@@ -3,6 +3,8 @@ import { BehaviorSubject, Subject,Subscription} from 'rxjs';
 import {Item} from '../models/Item';
 import {ItemListService} from './item-list.service';
 import {Router} from "@angular/router";
+import { ModalUserComponent } from '../modal-user/modal-user.component';
+import { User } from '../models/User';
 
 
 @Component({
@@ -11,42 +13,41 @@ import {Router} from "@angular/router";
   styleUrls: ['./share-layout.component.scss']
 })
 export class ShareLayoutComponent implements OnInit, OnDestroy  {
-  user: any;
+
+  private user: User;
   displayedColumns: string[] = ['productName', 'categories', 'expirationDate', 'quantity', 'pickup'];
   
-//  public items: Array<Item> = [
-//    {
-//      id: "1",
-//      name: "Pommes",
-//      description: "Des pommes en bonne état.",
-//      categories: ["fruit", "végan"],
-//      quantity: "2",
-//      expirationDate: new Date().toLocaleString()
-//    },
-//    {
-//      id: "2",
-//      name: "Poires",
-//      description: "Des poires acheté il y'a quelques jours",
-//      categories: ["fruit", "végétarien"],
-//      quantity: "3",
-//      expirationDate: new Date().toLocaleString()
-//    },
-//    {
-//      id: "3",
-//      name: "Choux",
-//      description: "Me prend pas le choux",
-//      categories: ["Légume", "végan", "végétarien"],
-//      quantity: "1",
-//      expirationDate: new Date().toLocaleString()
-//    },
-//  ];
+ public items: Item[] = [
+   {
+     id: "1",
+     name: "Pommes",
+     categories: ["fruit", "végan"],
+     quantity: "2",
+     expirationDate: new Date(),
+     user: this.itemListService.user
+   },
+   {
+     id: "2",
+     name: "Poires",
+     categories: ["fruit", "végétarien"],
+     quantity: "3",
+     expirationDate: new Date(),
+     user: this.itemListService.user
+   },
+   {
+     id: "3",
+     name: "Choux",
+     categories: ["Légume", "végan", "végétarien"],
+     quantity: "1",
+     expirationDate: new Date(),
+     user: this.itemListService.user
+   },
+ ];
 
-	public items: Item[];
+	// public items: Item[];
 	public subscriber: Subscription;
 
-  	constructor(protected itemListService: ItemListService, private router: Router) {
-      console.log(itemListService.user);
-      
+  	constructor(protected itemListService: ItemListService, private router: Router, private modalUser: ModalUserComponent) {      
   }
 
 	ngOnInit(): void {
@@ -60,13 +61,16 @@ export class ShareLayoutComponent implements OnInit, OnDestroy  {
       }
     }
 
-		this.subscriber = this.itemListService.itemsSubject.subscribe((items: Item[]) => {
-			this.items = items;
-		}); 
-		this.itemListService.getItems();
-    console.log(this.items);
+		// this.subscriber = this.itemListService.itemsSubject.subscribe((items: Item[]) => {
+		// 	this.items = items;
+		// }); 
+		// this.itemListService.getItems();
 	}
 
+  open(data: any) {
+    this.modalUser.open(data);
+  }
+    
 	ngOnDestroy(): void {
 		this.subscriber.unsubscribe();
 	}
