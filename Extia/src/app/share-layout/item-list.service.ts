@@ -1,4 +1,4 @@
-import { HttpClient, HttpResponse } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { Item } from 'src/app/models/Item';
@@ -30,7 +30,9 @@ export class ItemListService {
   }
 
   private delete(item: Item): Observable<HttpResponse<void>> {
-    return this.httpClient.delete<HttpResponse<void>>("url");
+    let url = "";
+    let headers = new HttpHeaders();
+    return this.httpClient.delete<HttpResponse<void>>("url", {headers: headers, body: item.id});
   }
 
 }

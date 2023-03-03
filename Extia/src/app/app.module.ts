@@ -12,20 +12,19 @@ import { SearchComponent } from './search/search.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
-import {MatDatepickerModule} from "@angular/material/datepicker";
-import {MatInputModule} from "@angular/material/input";
-import {MatNativeDateModule} from '@angular/material/core';
-import {MatChipsModule} from "@angular/material/chips";
-import {MatToolbarModule} from "@angular/material/toolbar";
-import {MatDividerModule} from "@angular/material/divider";
-import {MatButtonModule} from "@angular/material/button";
-import {MatCheckboxModule} from "@angular/material/checkbox";
-import {MatIconModule} from "@angular/material/icon";
-import {MatAutocompleteModule} from "@angular/material/autocomplete";
+import { MatDatepickerModule } from "@angular/material/datepicker";
+import { MatInputModule } from "@angular/material/input";
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatChipsModule } from "@angular/material/chips";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatDividerModule } from "@angular/material/divider";
+import { MatButtonModule } from "@angular/material/button";
+import { MatCheckboxModule } from "@angular/material/checkbox";
+import { MatIconModule } from "@angular/material/icon";
+import { MatAutocompleteModule } from "@angular/material/autocomplete";
 import { MatCardModule } from "@angular/material/card"
 import { MatTableModule } from "@angular/material/table"
 import { AddProductComponent } from './add-product/add-product.component';
-import { ItemListComponent } from './share-layout/item-list/item-list.component';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -38,7 +37,6 @@ import { HttpClientModule } from '@angular/common/http';
     ShareLayoutComponent,
     SearchComponent,
     AddProductComponent,
-    ItemListComponent,
   ],
   imports: [
     AppRoutingModule,
