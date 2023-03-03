@@ -1,5 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import { BehaviorSubject, Subject,Subscription} from 'rxjs';
+import {BehaviorSubject, Subject, Subscription} from 'rxjs';
 import {Item} from '../models/Item';
 import {ItemListService} from './item-list.service';
 import {Router} from "@angular/router";
@@ -12,7 +12,7 @@ import { User } from '../models/User';
   templateUrl: './share-layout.component.html',
   styleUrls: ['./share-layout.component.scss']
 })
-export class ShareLayoutComponent implements OnInit, OnDestroy  {
+export class ShareLayoutComponent implements OnInit, OnDestroy {
 
   private user: User;
   displayedColumns: string[] = ['productName', 'categories', 'expirationDate', 'quantity', 'pickup'];
@@ -50,7 +50,7 @@ export class ShareLayoutComponent implements OnInit, OnDestroy  {
   	constructor(protected itemListService: ItemListService, private router: Router, private modalUser: ModalUserComponent) {      
   }
 
-	ngOnInit(): void {
+  ngOnInit(): void {
     //check if user is not null and if not redirect to home in localstorage
     if (localStorage.getItem("user") == null) {
       this.router.navigate(['/login']);

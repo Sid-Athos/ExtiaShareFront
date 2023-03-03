@@ -1,4 +1,4 @@
-<app-search></app-search>
+<app-search (newItemEvent)="checkFilter($event)" (newItemEventSearchBar)="checkSearchBar($event)"></app-search>
 <app-add-product></app-add-product>
 
 <div class="d-flex flex-column">
@@ -6,17 +6,17 @@
         Liste des produits disponible
     </div>
 
-    <table mat-table [dataSource]="items" class="width-100 mat-elevation-z8">
+    <table mat-table [dataSource]="itemsTemp" class="width-100 mat-elevation-z8">
         <ng-container matColumnDef="productName">
             <th mat-header-cell *matHeaderCellDef>Nom du produit</th>
             <td mat-cell *matCellDef="let item">{{item.name}}</td>
         </ng-container>
         <ng-container matColumnDef="categories">
             <th mat-header-cell *matHeaderCellDef>Catégories</th>
-            <td mat-cell *matCellDef="let item">{{item.categories}}</td>
+            <td mat-cell *matCellDef="let item">{{item.categories.join(" / ")}}</td>
         </ng-container>
         <ng-container matColumnDef="expirationDate">
-            <th mat-header-cell *matHeaderCellDef>Date d'expiration</th>
+            <th mat-header-cell *matHeaderCellDef>Date d'expiration
             <td mat-cell *matCellDef="let item">{{item.expirationDate}}</td>
         </ng-container>
         <ng-container matColumnDef="quantity">
@@ -24,12 +24,12 @@
             <td mat-cell *matCellDef="let item">{{item.quantity}}</td>
         </ng-container>
         <ng-container matColumnDef="pickup">
-            <th mat-header-cell *matHeaderCellDef>Valider pickup</th>
-            <td mat-cell *matCellDef="let item">pickup</td>
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let item">
+              <i class="fa-sharp fa-solid fa-trash trash"></i>
+            </td>
         </ng-container>
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
-
-    <!-- <app-item-list class="mt-1" *ngFor="let item of items" [item]="item"></app-item-list>     -->
 </div>
