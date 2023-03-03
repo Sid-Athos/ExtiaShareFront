@@ -49,6 +49,70 @@ export class ShareLayoutComponent implements OnInit, OnDestroy {
       quantity: "2",
       expirationDate: new Date(),
       user: this.itemListService.user
+    },
+    {
+      id: "1",
+      name: "Pommes",
+      categories: ["fruit", "vegan"],
+      quantity: "2",
+      expirationDate: new Date(),
+      user: this.itemListService.user
+    },
+    {
+      id: "2",
+      name: "Poires",
+      categories: ["fruit", "vegetarien"],
+      quantity: "3",
+      expirationDate: new Date(),
+      user: this.itemListService.user
+    },
+    {
+      id: "3",
+      name: "Choux",
+      categories: ["Legume", "vegan", "vegetarien"],
+      quantity: "1",
+      expirationDate: new Date(),
+      user: this.itemListService.user
+    },
+    {
+      id: "4",
+      name: "Pommes",
+      categories: ["fruit", "vegan"],
+      quantity: "2",
+      expirationDate: new Date(),
+      user: this.itemListService.user
+    },
+    {
+      id: "1",
+      name: "Pommes",
+      categories: ["fruit", "vegan"],
+      quantity: "2",
+      expirationDate: new Date(),
+      user: this.itemListService.user
+    },
+    {
+      id: "2",
+      name: "Poires",
+      categories: ["fruit", "vegetarien"],
+      quantity: "3",
+      expirationDate: new Date(),
+      user: this.itemListService.user
+    },
+    {
+      id: "3",
+      name: "Choux",
+      categories: ["Legume", "vegan", "vegetarien"],
+      quantity: "1",
+      expirationDate: new Date(),
+      user: this.itemListService.user
+    },
+    {
+      id: "4",
+      name: "Pommes",
+      categories: ["fruit", "vegan"],
+      quantity: "2",
+      expirationDate: new Date(),
+      user: this.itemListService.user
     }
   ];
 
