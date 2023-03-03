@@ -1,5 +1,5 @@
 <img src="{{imageUser}}" class="logo-profil" width="60" height="60" style="cursor: pointer"
-     (click)="open(modalContent)">
+    >
 <ng-template #modalContent let-modal>
   <div class="modal-header">
     <h4 class="modal-title">Profile</h4>
@@ -12,7 +12,7 @@
                 align-items: center;
                 width: 100%;
                 height: 100%;">
-      <img src="{{imageUser}}" class="logo-profil" width="200" height="200">
+      <img src="{{imageUser}}" class="logo-profil" width="200" height="200" alt="User profile picture">
       <br>
       <div style=" display: flex;flex-direction: row">
         <p>{{user.mailAddress}}</p>

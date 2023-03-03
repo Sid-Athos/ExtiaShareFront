@@ -14,13 +14,12 @@ export class ModalUserComponent implements OnInit {
 
   imageUser: any;
 
-  open(content: any) {
-    this.modalService.open(content);
-  }
+
 
   ngOnInit() {
+    console.log(window.location)
     if (localStorage.getItem("user") == null) {
-      window.location.href = `${this.router.url}/login`;
+      this.router.navigate(["/login"]);
     } else {
       if (localStorage.getItem("user") != null) {
         let json = localStorage.getItem("user");

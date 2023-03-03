@@ -18,6 +18,8 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(window.location)
+
     this.router.events.subscribe((val) => {
       if (this.location.path() === '/login') {
         this.isNavBarComponent = true;
