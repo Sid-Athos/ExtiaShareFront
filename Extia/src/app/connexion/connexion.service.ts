@@ -7,7 +7,7 @@ import {UserConnect} from "../models/UserConnect";
   providedIn: 'root'
 })
 export class ConnexionService {
-  private getCategory = `https://clean-code.azurewebsites.net/account/find`;
+  private url = `https://clean-code.azurewebsites.net/account/find`;
 
   constructor(private httpClient: HttpClient) {
   }

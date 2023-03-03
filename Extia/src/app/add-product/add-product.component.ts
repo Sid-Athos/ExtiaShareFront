@@ -6,6 +6,8 @@ import {map, startWith} from 'rxjs/operators';
 import {CategoryListService} from "./add-product.service";
 import {Category} from "../models/Category";
 import {CreateProduct} from "../models/CreateProduct";
+import {Item} from "../models/Item";
+import {ItemListService} from "../share-layout/item-list.service";
 @Component({
   selector: 'app-add-product',
   templateUrl: './add-product.component.html',
@@ -18,7 +20,9 @@ export class AddProductComponent implements OnInit {
   allCategory: Category[] = [];
   options: string[] = [];
   allProduct: any;
-  constructor(private modalService: NgbModal, protected _categoryListService: CategoryListService) {
+  private subscriber: Subscription;
+   items: any = [];
+  constructor(private modalService: NgbModal, protected _categoryListService: CategoryListService,protected itemListService: ItemListService) {
     const currentYear = new Date().getFullYear();
     this.minDate = new Date();
     this.maxDate = new Date(currentYear + 10, 0, 1);
@@ -40,12 +44,22 @@ export class AddProductComponent implements OnInit {
       this.categories = response;
     });
     this._categoryListService.getSubscribeCategory();
+    let json = localStorage.getItem("user");
+    let user = JSON.parse(json!);
+    this._categoryListService.getAllStorage(1).subscribe((response) => {
+      this.allProduct = response;
+      for (let i = 0; i < response.length; i++) {
+        this.options.push(response[i].name)
+      }
+    });
+
   }
   minDate: Date;
   maxDate: Date;
   createProduct: CreateProduct;
   myControl = new FormControl('');
   filteredOptions: Observable<string[]> | undefined;
+  allStorage : any
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();
     return this.options.filter(option => option.toLowerCase().includes(filterValue));

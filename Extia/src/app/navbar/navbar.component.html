@@ -5,7 +5,7 @@
   </div>
   <form class="form-inline">
     <a class="navbar-brand deco" (click)="logout()">Déconnexion</a>
-    <app-modal-user></app-modal-user>
+    <app-modal-user [user]="this.user"></app-modal-user>
   </form>
 </nav>
 

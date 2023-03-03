@@ -11,6 +11,7 @@ export class CategoryListService {
 
   //private getAllProduct = `https://clean-code.azurewebsites.net/category`;
   private getAllProduct = `http://localhost:8080/product`;
+  private getAllStorageUrl = `https://clean-code.azurewebsites.net/stockedProducts/find/groupedByLocation/forCompany/`;
   private addProduct = `https://clean-code.azurewebsites.net/`;
   public categorySubject: Subject<Category[]> = new Subject<Category[]>();
   category: Category[] = [];
@@ -18,7 +19,7 @@ export class CategoryListService {
   constructor(private httpClient: HttpClient) {
   }
 
-  public getSubscribeCategory():void  {
+  public getSubscribeCategory(): void {
     this.fetchAll().subscribe((response) => {
       this.category = response;
       this.categorySubject.next(this.category);
@@ -33,6 +34,11 @@ export class CategoryListService {
   fetchAllProducts(): Observable<any> {
     const headers = new HttpHeaders({'Access-Control-Allow-Origin': '*'});
     return this.httpClient.get(this.getAllProduct, {headers});
+  }
+
+  getAllStorage(idCompany: number): Observable<any> {
+    const headers = new HttpHeaders({'Access-Control-Allow-Origin': '*'});
+    return this.httpClient.get(this.getAllStorageUrl + idCompany, {headers});
   }
 
   addProducts(product: any, idUser: any): Observable<any> {
