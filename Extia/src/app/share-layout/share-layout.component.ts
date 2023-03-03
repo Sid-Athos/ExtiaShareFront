@@ -13,7 +13,7 @@ import {Router} from "@angular/router";
 export class ShareLayoutComponent implements OnInit, OnDestroy {
   user: any;
   displayedColumns: string[] = ['productName', 'categories', 'expirationDate', 'quantity', 'pickup'];
-  
+
 //  public items: Array<Item> = [
 //    {
 //      id: "1",
@@ -43,10 +43,11 @@ export class ShareLayoutComponent implements OnInit, OnDestroy {
 
 	public items: Item[];
 	public subscriber: Subscription;
+  private tabFilter: any;
+   itemsTemp: Item[];
 
   	constructor(protected itemListService: ItemListService, private router: Router) {
       console.log(itemListService.user);
-      
   }
 
   ngOnInit(): void {
@@ -62,7 +63,7 @@ export class ShareLayoutComponent implements OnInit, OnDestroy {
 
 		this.subscriber = this.itemListService.itemsSubject.subscribe((items: Item[]) => {
 			this.items = items;
-		}); 
+		});
 		this.itemListService.getItems();
     console.log(this.items);
 	}
@@ -70,4 +71,34 @@ export class ShareLayoutComponent implements OnInit, OnDestroy {
 	ngOnDestroy(): void {
 		this.subscriber.unsubscribe();
 	}
+
+  checkFilter($event: string | null) {
+    if ($event != null) {
+      $event = $event.toLowerCase();
+      // Créer un tableau pour stocker les filtres sélectionnés
+
+      if (!this.tabFilter.includes($event)) {
+        this.tabFilter.push($event);
+      } else {
+        this.tabFilter.splice(this.tabFilter.indexOf($event), 1);
+      }
+    }
+    // Si le tableau est vide, on affiche tous les items
+    if (this.tabFilter.length == 0) {
+      this.itemsTemp = this.items;
+    }
+    // Sinon on filtre les items par rapport au filtres dans tabFilter, et on affiche les items qui ont tous les filtre
+    else {
+      this.itemsTemp = this.items.filter(item => this.tabFilter.every((filter: any) => item.categories.includes(filter)));
+    }
+  }
+
+  checkSearchBar($event: string) {
+    if ($event == "") {
+      this.itemsTemp = this.items;
+      this.checkFilter(null);
+    } else {
+      this.itemsTemp = this.itemsTemp.filter(item => item.name.toLowerCase().includes($event.toLowerCase()));
+    }
+  }
 }
