@@ -4,8 +4,10 @@ import {FormControl} from '@angular/forms';
 import {Observable, Subscription} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
 import {CategoryListService} from "./add-product.service";
-import {HttpResponse} from "@angular/common/http";
 import {Category} from "../models/Category";
+import {CreateProduct} from "../models/CreateProduct";
+import {Item} from "../models/Item";
+import {ItemListService} from "../share-layout/item-list.service";
 
 @Component({
   selector: 'app-add-product',
@@ -13,13 +15,17 @@ import {Category} from "../models/Category";
   styleUrls: ['./add-product.component.scss']
 })
 export class AddProductComponent implements OnInit {
-  public _itemSubscription: Subscription | undefined;
-
   public categories: Category[] = [];
+  public _categorySubscription: Subscription | undefined;
+  product: any;
+  allCategory: Category[] = [];
+  options: string[] = [];
+  allProduct: any;
+  sizeStorage: any[] = [];
+  private subscriber: Subscription;
+  items: any = [];
 
-  product : any;
-
-  constructor(private modalService: NgbModal, protected _categoryListService: CategoryListService) {
+  constructor(private modalService: NgbModal, protected _categoryListService: CategoryListService, protected itemListService: ItemListService) {
     const currentYear = new Date().getFullYear();
     this.minDate = new Date();
     this.maxDate = new Date(currentYear + 10, 0, 1);
@@ -30,27 +36,55 @@ export class AddProductComponent implements OnInit {
       startWith(''),
       map(value => this._filter(value || '')),
     );
-    this._itemSubscription = this._categoryListService.fetchAll().subscribe((response) => {
-        this.categories = response;
-        console.log(this.categories)
-    });
-    this._itemSubscription = this._categoryListService.fetchAll().subscribe((response) => {
+
+    /*    this._categoryListService.fetchAllProducts().subscribe((response) => {
+          this.allProduct = response;
+          console.log(this.allProduct)
+          for (let i = 0; i < response.length; i++) {
+            this.options.push(response[i].name)
+          }
+        });*/
+    this.allProduct = [{
+      "id": 1,
+      "name": "Fraise",
+      "categoryEntitySet": [
+        {
+          "id": 1,
+          "name": "Fruit"
+        }
+      ]
+    }]
+
+    this.options.push("Fraise")
+
+
+    this._categorySubscription = this._categoryListService.categorySubject.subscribe((response) => {
       this.categories = response;
-      console.log(this.categories)
     });
+    this._categoryListService.getSubscribeCategory();
+    let json = localStorage.getItem("user");
+    if (json != null) {
+      let user = JSON.parse(json!);
+      this._categoryListService.getAllStorage(user.company.id).subscribe((response) => {
+        for (let i = 0; i < response.length; i++) {
+          this.sizeStorage.push(response[i].size)
+        }
+      });
+    }
+
+
   }
 
   minDate: Date;
   maxDate: Date;
-
-
+  createProduct: CreateProduct;
   myControl = new FormControl('');
-  options: string[] = ['One', 'Two', 'Three'];
   filteredOptions: Observable<string[]> | undefined;
+  allStorage: any
+  inputValue: any = 0;
 
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();
-
     return this.options.filter(option => option.toLowerCase().includes(filterValue));
   }
 
@@ -59,6 +93,42 @@ export class AddProductComponent implements OnInit {
   }
 
   selectOptionOfProduct(option: any) {
-    console.log(option);
+    this.product = this.allProduct.find((product: any) => product.name === option);
+    this.allCategory = this.product.categoryEntitySet;
+    this.categories = this.allCategory;
+  }
+
+  addProduct(name: any, picker: any, quantity: any) {
+    this.modalService.dismissAll();
+/*    this.createProduct = {
+      name: name.value,
+      expiration: picker._model.selection,
+      quantity: quantity.value,
+      categories: this.allCategory,
+      containerId: 1,
+      description: "super !"
+    }
+    let json = localStorage.getItem("user");
+    let user = JSON.parse(json!);
+    this._categoryListService.addProducts(this.createProduct, user.id).subscribe((response) => {
+      console.log(response)
+    });*/
+  }
+
+  addCategory(category: Category) {
+    if (this.allCategory.includes(category)) {
+      this.allCategory.splice(this.allCategory.indexOf(category), 1);
+    } else {
+      this.allCategory.push(category);
+    }
+  }
+
+  closeModal() {
+    this._categoryListService.getSubscribeCategory();
+    this.modalService.dismissAll();
+  }
+
+  checkQuantity() {
+    console.log(this.inputValue)
   }
 }

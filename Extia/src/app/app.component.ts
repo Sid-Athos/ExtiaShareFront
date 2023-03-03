@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
     console.log(window.location)
 
     this.router.events.subscribe((val) => {
-      if (this.location.path() === '/login') {
+      if (this.location.isCurrentPathEqualTo('/login')) {
         this.isNavBarComponent = true;
       } else {
         this.isNavBarComponent = false;
