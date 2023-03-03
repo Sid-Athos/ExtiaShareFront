@@ -17,6 +17,8 @@ export class AddProductComponent implements OnInit {
 
   public categories: Category[] = [];
 
+  product : any;
+
   constructor(private modalService: NgbModal, protected _categoryListService: CategoryListService) {
     const currentYear = new Date().getFullYear();
     this.minDate = new Date();
@@ -31,6 +33,10 @@ export class AddProductComponent implements OnInit {
     this._itemSubscription = this._categoryListService.fetchAll().subscribe((response) => {
         this.categories = response;
         console.log(this.categories)
+    });
+    this._itemSubscription = this._categoryListService.fetchAll().subscribe((response) => {
+      this.categories = response;
+      console.log(this.categories)
     });
   }
 
