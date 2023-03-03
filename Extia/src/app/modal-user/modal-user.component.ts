@@ -1,12 +1,13 @@
 import {Component, OnInit} from '@angular/core';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-modal-user',
   templateUrl: './modal-user.component.html',
 })
 export class ModalUserComponent implements OnInit {
-  constructor(private modalService: NgbModal) {
+  constructor(private modalService: NgbModal,private router: Router) {
   }
 
   user: any;
@@ -19,7 +20,7 @@ export class ModalUserComponent implements OnInit {
 
   ngOnInit() {
     if (localStorage.getItem("user") == null) {
-      window.location.href = `${window.location.origin}/login`;
+      window.location.href = `${this.router.url}/login`;
     } else {
       if (localStorage.getItem("user") != null) {
         let json = localStorage.getItem("user");
