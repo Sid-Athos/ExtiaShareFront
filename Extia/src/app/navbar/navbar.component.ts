@@ -11,7 +11,7 @@ constructor(private router: Router) {
 }
   logout() {
     localStorage.removeItem("user");
+    debugger;
     this.router.navigate(['/login']);
-    console.log("logout")
   }
 }

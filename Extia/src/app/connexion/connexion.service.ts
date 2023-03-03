@@ -1,7 +1,6 @@
 import {HttpClient, HttpEvent, HttpHeaders, HttpResponse} from '@angular/common/http';
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
-import {Category} from 'src/app/models/Category';
 import {UserConnect} from "../models/UserConnect";
 
 @Injectable({
@@ -15,7 +14,7 @@ export class ConnexionService {
 
   connexionUser(userConnect: UserConnect): Observable<any> {
     const headers = new HttpHeaders({'Access-Control-Allow-Origin': '*'});
-    return this.httpClient.post<any>(this.getCategory, userConnect, {headers});
+    return this.httpClient.post<any>(this.url, userConnect, {headers});
   }
 
 }
