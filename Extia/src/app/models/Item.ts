@@ -1,10 +1,12 @@
+import { User } from "./User";
+
 export interface Item {
 
-    id: string;
+    id?: string;
     name: string;
-    description: string;
     categories:  Array<any>;
     quantity: string;
-    expirationDate: string;
+    expirationDate: Date;
+    user: User;
 
 }

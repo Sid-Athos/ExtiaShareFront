@@ -13,7 +13,6 @@ import {Category} from "../models/Category";
   styleUrls: ['./add-product.component.scss']
 })
 export class AddProductComponent implements OnInit {
-  public _itemSubscription: Subscription | undefined;
 
   public categories: Category[] = [];
 
@@ -28,7 +27,7 @@ export class AddProductComponent implements OnInit {
       startWith(''),
       map(value => this._filter(value || '')),
     );
-    this._itemSubscription = this._categoryListService.fetchAll().subscribe((response) => {
+    this._categoryListService.fetchAll().subscribe((response) => {
         this.categories = response;
         console.log(this.categories)
     });

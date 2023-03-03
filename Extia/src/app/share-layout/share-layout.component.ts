@@ -45,6 +45,8 @@ export class ShareLayoutComponent implements OnInit, OnDestroy  {
 	public subscriber: Subscription;
 
   	constructor(protected itemListService: ItemListService, private router: Router) {
+      console.log(itemListService.user);
+      
   }
 
 	ngOnInit(): void {
@@ -57,10 +59,12 @@ export class ShareLayoutComponent implements OnInit, OnDestroy  {
         this.user = JSON.parse(json!);
       }
     }
+
 		this.subscriber = this.itemListService.itemsSubject.subscribe((items: Item[]) => {
 			this.items = items;
 		}); 
 		this.itemListService.getItems();
+    console.log(this.items);
 	}
 
 	ngOnDestroy(): void {

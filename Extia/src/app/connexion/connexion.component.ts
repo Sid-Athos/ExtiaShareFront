@@ -12,7 +12,6 @@ import {ConnexionService} from "./connexion.service";
 export class ConnexionComponent implements OnInit {
   userConnect: UserConnect = new UserConnect();
   user: any;
-  public _itemSubscription: Subscription | undefined;
   public returnError = false;
   public returnMessage: string = "";
 
@@ -31,11 +30,12 @@ export class ConnexionComponent implements OnInit {
       this.userConnect.password = password.value;
       console.log(this.userConnect);
 
-      this._itemSubscription = this._connexionService.connexionUser(this.userConnect).subscribe((response) => {
+      this._connexionService.connexionUser(this.userConnect).subscribe((response) => {
         this.user = response;
+        console.log(this.user);
         if (this.user != null) {
           localStorage.setItem("user", JSON.stringify(this.user));
-          this.router.navigate(['/share']);
+          this.router.navigate(['/share']);          
         }
       });
     }
