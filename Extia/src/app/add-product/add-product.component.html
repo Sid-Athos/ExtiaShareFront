@@ -57,10 +57,7 @@
     <br>
     <h1 style="color: #ff8034">Emplacement</h1>
     <mat-chip-listbox aria-label="Fish selection">
-      <mat-chip-option>One fish</mat-chip-option>
-      <mat-chip-option>Two fish</mat-chip-option>
-      <mat-chip-option color="accent">Accent fish</mat-chip-option>
-      <mat-chip-option color="warn">Warn fish</mat-chip-option>
+      <mat-chip-option *ngFor="let size of sizeStorage ">Frigo {{size}}</mat-chip-option>
     </mat-chip-listbox>
   </div>
   <div class="modal-footer">

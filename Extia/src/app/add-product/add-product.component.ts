@@ -8,6 +8,7 @@ import {Category} from "../models/Category";
 import {CreateProduct} from "../models/CreateProduct";
 import {Item} from "../models/Item";
 import {ItemListService} from "../share-layout/item-list.service";
+
 @Component({
   selector: 'app-add-product',
   templateUrl: './add-product.component.html',
@@ -20,13 +21,16 @@ export class AddProductComponent implements OnInit {
   allCategory: Category[] = [];
   options: string[] = [];
   allProduct: any;
+  sizeStorage: any[] = [];
   private subscriber: Subscription;
-   items: any = [];
-  constructor(private modalService: NgbModal, protected _categoryListService: CategoryListService,protected itemListService: ItemListService) {
+  items: any = [];
+
+  constructor(private modalService: NgbModal, protected _categoryListService: CategoryListService, protected itemListService: ItemListService) {
     const currentYear = new Date().getFullYear();
     this.minDate = new Date();
     this.maxDate = new Date(currentYear + 10, 0, 1);
   }
+
   ngOnInit() {
     this.filteredOptions = this.myControl.valueChanges.pipe(
       startWith(''),
@@ -46,32 +50,36 @@ export class AddProductComponent implements OnInit {
     this._categoryListService.getSubscribeCategory();
     let json = localStorage.getItem("user");
     let user = JSON.parse(json!);
-    this._categoryListService.getAllStorage(1).subscribe((response) => {
-      this.allProduct = response;
+    this._categoryListService.getAllStorage(user.company.id).subscribe((response) => {
       for (let i = 0; i < response.length; i++) {
-        this.options.push(response[i].name)
+        this.sizeStorage.push(response[i].size)
       }
     });
 
   }
+
   minDate: Date;
   maxDate: Date;
   createProduct: CreateProduct;
   myControl = new FormControl('');
   filteredOptions: Observable<string[]> | undefined;
-  allStorage : any
+  allStorage: any
+
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();
     return this.options.filter(option => option.toLowerCase().includes(filterValue));
   }
+
   open(content: any) {
     this.modalService.open(content);
   }
+
   selectOptionOfProduct(option: any) {
     this.product = this.allProduct.find((product: any) => product.name === option);
     this.allCategory = this.product.categoryEntitySet;
     this.categories = this.allCategory;
   }
+
   addProduct(name: any, picker: any, quantity: any) {
     this.createProduct = {
       name: name.value,
@@ -87,6 +95,7 @@ export class AddProductComponent implements OnInit {
       console.log(response)
     });
   }
+
   addCategory(category: Category) {
     if (this.allCategory.includes(category)) {
       this.allCategory.splice(this.allCategory.indexOf(category), 1);
@@ -94,6 +103,7 @@ export class AddProductComponent implements OnInit {
       this.allCategory.push(category);
     }
   }
+
   closeModal() {
     this._categoryListService.getSubscribeCategory();
     this.modalService.dismissAll();
