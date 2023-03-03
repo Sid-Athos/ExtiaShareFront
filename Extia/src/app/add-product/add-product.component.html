@@ -23,7 +23,8 @@
               aria-label="Nom du produit"
               matInput
               [formControl]="myControl"
-              [matAutocomplete]="auto">
+              [matAutocomplete]="auto"
+              #name>
             <mat-autocomplete #auto="matAutocomplete">
               <mat-option *ngFor="let option of filteredOptions | async" [value]="option"
                           (click)="selectOptionOfProduct(option)">
@@ -39,7 +40,7 @@
           <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
-        <input type="number" placeholder="Quantité...">
+        <input type="number" placeholder="Quantité..." #quantity>
       </div>
     </div>
     <br>
@@ -48,7 +49,8 @@
     <mat-chip-listbox aria-label="Fish selection" multiple selectable
                       class="d-flex flex-row">
 
-      <mat-chip-option class="d-flex" *ngFor="let category of categories">{{category["name"]}}</mat-chip-option>
+      <mat-chip-option class="d-flex" *ngFor="let category of categories"
+                       (click)="addCategory(category)" [selected]="allCategory.includes(category)">{{category.name}}</mat-chip-option>
 
     </mat-chip-listbox>
 
@@ -62,8 +64,9 @@
     </mat-chip-listbox>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-primary add-product-style">Ajouter</button>
-    <button type="button" class="btn btn-secondary" (click)="modal.dismiss()">Close</button>
+    <button type="button" class="btn btn-primary add-product-style" (click)="addProduct(name,picker,quantity)">Ajouter
+    </button>
+    <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
   </div>
 </ng-template>
 

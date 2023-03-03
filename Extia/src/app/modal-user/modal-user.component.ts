@@ -20,7 +20,7 @@ export class ModalUserComponent implements OnInit {
 
   ngOnInit() {
     if (localStorage.getItem("user") == null) {
-      window.location.href = `${this.router.url}/login`;
+      this.router.navigate(["/login"]);
     } else {
       if (localStorage.getItem("user") != null) {
         let json = localStorage.getItem("user");

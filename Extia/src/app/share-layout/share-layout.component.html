@@ -13,7 +13,7 @@
         </ng-container>
         <ng-container matColumnDef="categories">
             <th mat-header-cell *matHeaderCellDef>Catégories</th>
-            <td mat-cell *matCellDef="let item">{{item.categories}}</td>
+            <td mat-cell *matCellDef="let item">{{item.categories.join(" / ")}}</td>
         </ng-container>
         <ng-container matColumnDef="expirationDate">
             <th mat-header-cell *matHeaderCellDef>Date d'expiration

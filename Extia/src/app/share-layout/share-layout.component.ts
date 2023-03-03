@@ -35,10 +35,1058 @@ export class ShareLayoutComponent implements OnInit, OnDestroy {
       id: "3",
       name: "Choux",
       description: "Me prend pas le choux",
-      categories: ["legume", "vegan", "végétarien"],
+      categories: ["légumes", "vegan", "végétarien"],
       quantity: "1",
       expirationDate: new Date().toLocaleString()
     },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    },
+    {
+      id: "3",
+      name: "Choux",
+      description: "Me prend pas le choux",
+      categories: ["légumes", "vegan", "végétarien"],
+      quantity: "1",
+      expirationDate: new Date().toLocaleString()
+    }
   ];
   public itemsTemp: Array<Item> = this.items;
   // public items: Item[];
@@ -84,7 +1132,20 @@ export class ShareLayoutComponent implements OnInit, OnDestroy {
     }
     // Sinon on filtre les items par rapport au filtres dans tabFilter, et on affiche les items qui ont tous les filtre
     else {
-      this.itemsTemp = this.items.filter(item => this.tabFilter.every((filter: any) => item.categories.includes(filter)));
+      let start = Date.now()
+      let newItems : any = [];
+      this.items.forEach(item => {
+        let allPresent = true;
+          for(let i = 0; i < this.tabFilter.length; i++){
+            if(!item.categories.includes(this.tabFilter[i])){
+              allPresent = false
+
+            }
+          }
+        if(allPresent && !newItems.find((newImpute : any) => newImpute.id == item.id)) newItems.push(item)
+      });
+      this.itemsTemp = newItems;
+      console.log((Date.now() - start))
     }
   }
 
