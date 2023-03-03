@@ -37,19 +37,33 @@ export class AddProductComponent implements OnInit {
       map(value => this._filter(value || '')),
     );
 
-    this._categoryListService.fetchAllProducts().subscribe((response) => {
-      this.allProduct = response;
-      for (let i = 0; i < response.length; i++) {
-        this.options.push(response[i].name)
-      }
-    });
+    /*    this._categoryListService.fetchAllProducts().subscribe((response) => {
+          this.allProduct = response;
+          console.log(this.allProduct)
+          for (let i = 0; i < response.length; i++) {
+            this.options.push(response[i].name)
+          }
+        });*/
+    this.allProduct = [{
+      "id": 1,
+      "name": "Fraise",
+      "categoryEntitySet": [
+        {
+          "id": 1,
+          "name": "Fruit"
+        }
+      ]
+    }]
+
+    this.options.push("Fraise")
+
 
     this._categorySubscription = this._categoryListService.categorySubject.subscribe((response) => {
       this.categories = response;
     });
     this._categoryListService.getSubscribeCategory();
     let json = localStorage.getItem("user");
-    if(json != null){
+    if (json != null) {
       let user = JSON.parse(json!);
       this._categoryListService.getAllStorage(user.company.id).subscribe((response) => {
         for (let i = 0; i < response.length; i++) {
@@ -67,6 +81,7 @@ export class AddProductComponent implements OnInit {
   myControl = new FormControl('');
   filteredOptions: Observable<string[]> | undefined;
   allStorage: any
+  inputValue: any = 0;
 
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();
@@ -84,7 +99,8 @@ export class AddProductComponent implements OnInit {
   }
 
   addProduct(name: any, picker: any, quantity: any) {
-    this.createProduct = {
+    this.modalService.dismissAll();
+/*    this.createProduct = {
       name: name.value,
       expiration: picker._model.selection,
       quantity: quantity.value,
@@ -96,7 +112,7 @@ export class AddProductComponent implements OnInit {
     let user = JSON.parse(json!);
     this._categoryListService.addProducts(this.createProduct, user.id).subscribe((response) => {
       console.log(response)
-    });
+    });*/
   }
 
   addCategory(category: Category) {
@@ -110,5 +126,9 @@ export class AddProductComponent implements OnInit {
   closeModal() {
     this._categoryListService.getSubscribeCategory();
     this.modalService.dismissAll();
+  }
+
+  checkQuantity() {
+    console.log(this.inputValue)
   }
 }

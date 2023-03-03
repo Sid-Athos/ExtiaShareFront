@@ -21,7 +21,7 @@ export class ShareLayoutComponent implements OnInit, OnDestroy {
     {
       id: "1",
       name: "Pommes",
-      categories: ["fruit", "végan"],
+      categories: ["fruit", "vegan"],
       quantity: "2",
       expirationDate: new Date(),
       user: this.itemListService.user
@@ -29,7 +29,7 @@ export class ShareLayoutComponent implements OnInit, OnDestroy {
     {
       id: "2",
       name: "Poires",
-      categories: ["fruit", "végétarien"],
+      categories: ["fruit", "vegetarien"],
       quantity: "3",
       expirationDate: new Date(),
       user: this.itemListService.user
@@ -37,17 +37,25 @@ export class ShareLayoutComponent implements OnInit, OnDestroy {
     {
       id: "3",
       name: "Choux",
-      categories: ["Légume", "végan", "végétarien"],
+      categories: ["Legume", "vegan", "vegetarien"],
       quantity: "1",
       expirationDate: new Date(),
       user: this.itemListService.user
     },
+    {
+      id: "4",
+      name: "Pommes",
+      categories: ["fruit", "vegan"],
+      quantity: "2",
+      expirationDate: new Date(),
+      user: this.itemListService.user
+    }
   ];
 
 	// public items: Item[];
 	public subscriber: Subscription;
-  private tabFilter: any;
-  itemsTemp: Item[];
+  private tabFilter: any =[];
+  itemsTemp: Item[] = this.items;
 
   	constructor(protected itemListService: ItemListService, private router: Router, private modalUser: ModalUserComponent) {
   }
@@ -67,17 +75,15 @@ export class ShareLayoutComponent implements OnInit, OnDestroy {
 		// 	this.items = items;
 		// });
 		// this.itemListService.getItems();
+
 	}
 
 	ngOnDestroy(): void {
 	//	this.subscriber.unsubscribe();
 	}
 
-  open(data: any) {
-    this.modalUser.open(data);
-  }
-
   checkFilter($event: string | null) {
+    console.log($event)
     if ($event != null) {
       $event = $event.toLowerCase();
       // Créer un tableau pour stocker les filtres sélectionnés

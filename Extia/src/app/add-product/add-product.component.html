@@ -40,7 +40,8 @@
           <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
-        <input type="number" placeholder="Quantité..." #quantity>
+        <input type="number" placeholder="Quantité..." #quantity [(ngModel)]="inputValue"
+               (ngModelChange)="checkQuantity()">
       </div>
     </div>
     <br>
@@ -50,14 +51,19 @@
                       class="d-flex flex-row">
 
       <mat-chip-option class="d-flex" *ngFor="let category of categories"
-                       (click)="addCategory(category)" [selected]="allCategory.includes(category)">{{category.name}}</mat-chip-option>
+                       (click)="addCategory(category)"
+                       [selected]="allCategory.includes(category)">{{category.name}}</mat-chip-option>
 
     </mat-chip-listbox>
 
     <br>
     <h1 style="color: #ff8034">Emplacement</h1>
-    <mat-chip-listbox aria-label="Fish selection">
-      <mat-chip-option *ngFor="let size of sizeStorage ">Frigo {{size}}</mat-chip-option>
+    <mat-chip-listbox aria-label="Fish selection" *ngFor="let size of sizeStorage ">
+      <mat-chip-option  *ngIf="size >= inputValue">
+        <div *ngIf="size >= inputValue">
+          Frigo {{size}}
+        </div>
+      </mat-chip-option>
     </mat-chip-listbox>
   </div>
   <div class="modal-footer">
